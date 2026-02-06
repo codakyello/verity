@@ -114,14 +114,14 @@ export default function Navbar() {
                 {showSearchNav ? (
                     /* --- SCROLLED STATE: SEARCH BAR ONLY --- */
                     <div className="flex items-center justify-center w-full animate-in fade-in zoom-in-95 duration-300">
-                        <div className="relative w-full max-w-[600px] flex items-center border-[1px] border-[#726a60] focus:border-[var(--color)] rounded-full">
+                        <div className="relative w-full max-w-[600px] flex items-center border-[1px] border-[#726a60] rounded-full">
                             <input
                                 type="text"
                                 placeholder="Address, School, City, Zip or Neighborhood"
                                 value={navSearchQuery}
                                 onChange={(e) => setNavSearchQuery(e.target.value)}
                                 onKeyDown={(e) => e.key === 'Enter' && handleNavSearch()}
-                                className="w-full bg-gray-100  placeholder:text-[16px] hover:bg-gray-50 focus:bg-white rounded-full py-3 pl-6 pr-14 text-base text-[#1a1816] placeholder:text-gray-500 transition-all border border-transparent focus-visible:outline-[#1F3A5F]"
+                                className="w-full bg-gray-100 placeholder:text-[16px] hover:bg-gray-50 focus:bg-white rounded-full py-3 pl-6 pr-14 text-base text-[#1a1816] placeholder:text-gray-500 transition-all border border-transparent focus:outline-none appearance-none"
                                 autoFocus
                             />
                             <button
