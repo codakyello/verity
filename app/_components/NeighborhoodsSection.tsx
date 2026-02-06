@@ -13,7 +13,7 @@ const NEIGHBORHOODS = [
 export default function NeighborhoodsSection() {
     return (
         <section className="py-20 bg-gray-50">
-            <div className="px-6 md:px-12 lg:px-24">
+            <div className=" md:px-12 lg:px-24">
                 <h2 className="text-3xl font-display font-bold text-[#1a1816] mb-10">Explore Neighborhoods</h2>
 
                 <div className="flex overflow-x-auto gap-6 pb-8 snap-x">

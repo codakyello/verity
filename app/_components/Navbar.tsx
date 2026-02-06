@@ -121,7 +121,7 @@ export default function Navbar() {
                                 value={navSearchQuery}
                                 onChange={(e) => setNavSearchQuery(e.target.value)}
                                 onKeyDown={(e) => e.key === 'Enter' && handleNavSearch()}
-                                className="w-full bg-gray-100  placeholder:text-[16px] hover:bg-gray-50 focus:bg-white rounded-full py-3 pl-6 pr-14 text-base text-[#1a1816] placeholder:text-gray-500 transition-all border border-transparent focus:border-[#1F3A5F]/20"
+                                className="w-full bg-gray-100  placeholder:text-[16px] hover:bg-gray-50 focus:bg-white rounded-full py-3 pl-6 pr-14 text-base text-[#1a1816] placeholder:text-gray-500 transition-all border border-transparent focus-visible:outline-[#1F3A5F]"
                                 autoFocus
                             />
                             <button

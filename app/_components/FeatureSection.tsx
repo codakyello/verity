@@ -37,7 +37,7 @@ const features = [
 export default function FeatureSection() {
     return (
         <section className="py-16 bg-[#f9f9fb]">
-            <div className=" px-6 md:px-12 lg:px-24">
+            <div className="  md:px-12 lg:px-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {features.map((feature) => (
                         <div key={feature.title} className="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">

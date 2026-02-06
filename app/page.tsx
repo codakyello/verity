@@ -23,10 +23,13 @@ export default function PremiumPage() {
 
             <Hero searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
-            <BrowseSection />
-            {/* <FeaturedSection /> */}
-            <NeighborhoodsSection />
-            <FeatureSection />
+            <div className="px-[16px] bg-gray-50 ">
+
+                <BrowseSection />
+                {/* <FeaturedSection /> */}
+                <NeighborhoodsSection />
+                <FeatureSection />
+            </div>
 
             {/* Premium Social Proof / Stats */}
             <section className="py-24 bg-[#1a1816] text-white">
