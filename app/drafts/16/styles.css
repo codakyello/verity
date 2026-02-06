@@ -1,0 +1,50 @@
+/* Design 16: Elegant Serif */
+/* Scoped typography to override global Geist defaults */
+
+.design-16 {
+    --color-bg: #FAF9F7;
+    --color-bg-card: #FFFFFF;
+    --color-text: #1A1A2E;
+    --color-text-muted: #6B7280;
+    --color-accent: #1E3A5F;
+    --color-accent-warm: #B8860B;
+    --color-border: #E8E6E3;
+    
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Classes */
+.design-16 .font-display {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-16 .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Heading styles */
+.design-16 h1,
+.design-16 h2,
+.design-16 h3 {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+/* Body text */
+.design-16 p,
+.design-16 span,
+.design-16 a,
+.design-16 button,
+.design-16 input,
+.design-16 label {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Selection */
+.design-16 ::selection {
+    background-color: var(--color-accent);
+    color: white;
+}

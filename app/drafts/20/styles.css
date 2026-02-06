@@ -1,0 +1,53 @@
+/* Design 20: Modern Tech */
+
+.design-20 {
+    --color-bg: #0A0A0F;
+    --color-bg-card: #12121A;
+    --color-text: #FFFFFF;
+    --color-text-muted: #9CA3AF;
+    --color-accent: #3B82F6;
+    --color-accent-cyan: #06B6D4;
+    --color-border: #1F1F2E;
+
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.design-20 .font-display {
+    font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.design-20 .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-20 h1,
+.design-20 h2,
+.design-20 h3 {
+    font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.design-20 p,
+.design-20 span,
+.design-20 a,
+.design-20 button,
+.design-20 input,
+.design-20 label {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-20 ::selection {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+/* Gradient text utility */
+.design-20 .gradient-text {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

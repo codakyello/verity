@@ -1,0 +1,45 @@
+/* Design 19: Classic Luxury */
+
+.design-19 {
+    --color-bg: #FFFBF5;
+    --color-bg-cream: #FAF5ED;
+    --color-text: #1A1A1A;
+    --color-text-muted: #7A7A7A;
+    --color-accent: #8B2635;
+    --color-gold: #C9A962;
+    --color-border: #E8E0D5;
+
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.design-19 .font-display {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-19 .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-19 h1,
+.design-19 h2,
+.design-19 h3 {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-19 p,
+.design-19 span,
+.design-19 a,
+.design-19 button,
+.design-19 input,
+.design-19 label {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-19 ::selection {
+    background-color: var(--color-accent);
+    color: white;
+}

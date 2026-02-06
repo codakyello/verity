@@ -1,0 +1,44 @@
+/* Design 22: Forest Green */
+
+.design-22 {
+    --color-bg: #FAFAFA;
+    --color-text: #1A1A1A;
+    --color-text-muted: #6B7280;
+    --color-accent: #2D4739;
+    --color-border: #E5E7EB;
+
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.design-22 .font-display {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-22 .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-22 h1,
+.design-22 h2,
+.design-22 h3 {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-22 p,
+.design-22 span,
+.design-22 a,
+.design-22 button,
+.design-22 input,
+.design-22 select,
+.design-22 label {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-22 ::selection {
+    background-color: var(--color-accent);
+    color: white;
+}

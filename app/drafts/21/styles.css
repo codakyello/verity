@@ -1,0 +1,44 @@
+/* Design 21: Deep Navy */
+
+.design-21 {
+    --color-bg: #FFFFFF;
+    --color-text: #1A1A2E;
+    --color-text-muted: #6B7280;
+    --color-accent: #1E3A5F;
+    --color-border: #E5E7EB;
+
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.design-21 .font-display {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-21 .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-21 h1,
+.design-21 h2,
+.design-21 h3 {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-21 p,
+.design-21 span,
+.design-21 a,
+.design-21 button,
+.design-21 input,
+.design-21 select,
+.design-21 label {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-21 ::selection {
+    background-color: var(--color-accent);
+    color: white;
+}

@@ -1,0 +1,48 @@
+/* Design 26: Premium Final - EB Garamond + Karla with Navy/Gold */
+
+.design-26 {
+    --color-bg: #FFFFFF;
+    --color-text: #1A1A2E;
+    --color-text-muted: #6B7280;
+    --color-accent: #1E3A5F;
+    --color-accent-gold: #B8860B;
+    --color-accent-gold: #B8860B;
+    --color-border: #E5E7EB;
+
+    --font-body: var(--font-display);
+
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.design-26 .font-display {
+    font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.design-26 .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-26 h1,
+.design-26 h2,
+.design-26 h3 {
+    font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.design-26 p,
+.design-26 span,
+.design-26 a,
+.design-26 button,
+.design-26 input,
+.design-26 select,
+.design-26 label {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-26 ::selection {
+    background-color: var(--color-accent);
+    color: white;
+}

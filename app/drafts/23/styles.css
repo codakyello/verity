@@ -1,0 +1,44 @@
+/* Design 23: Burgundy */
+
+.design-23 {
+    --color-bg: #FFFDF9;
+    --color-text: #1A1A1A;
+    --color-text-muted: #6B7280;
+    --color-accent: #722F37;
+    --color-border: #E8E6E3;
+
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.design-23 .font-display {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-23 .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-23 h1,
+.design-23 h2,
+.design-23 h3 {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-23 p,
+.design-23 span,
+.design-23 a,
+.design-23 button,
+.design-23 input,
+.design-23 select,
+.design-23 label {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-23 ::selection {
+    background-color: var(--color-accent);
+    color: white;
+}

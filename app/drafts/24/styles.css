@@ -1,0 +1,44 @@
+/* Design 24: Slate Charcoal */
+
+.design-24 {
+    --color-bg: #FFFFFF;
+    --color-text: #111827;
+    --color-text-muted: #6B7280;
+    --color-accent: #374151;
+    --color-border: #E5E7EB;
+
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.design-24 .font-display {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-24 .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-24 h1,
+.design-24 h2,
+.design-24 h3 {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-24 p,
+.design-24 span,
+.design-24 a,
+.design-24 button,
+.design-24 input,
+.design-24 select,
+.design-24 label {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-24 ::selection {
+    background-color: var(--color-accent);
+    color: white;
+}

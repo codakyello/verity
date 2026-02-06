@@ -1,0 +1,48 @@
+/* Design 18: Bold Editorial */
+
+.design-18 {
+    --color-bg: #FFFFFF;
+    --color-bg-dark: #0A0A0A;
+    --color-text: #0A0A0A;
+    --color-text-muted: #6B7280;
+    --color-accent: #FF3D00;
+    --color-border: #E5E5E5;
+
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.design-18 .font-display {
+    font-family: var(--font-display), Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.design-18 .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-18 h1,
+.design-18 h2,
+.design-18 h3 {
+    font-family: var(--font-display), Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.design-18 p,
+.design-18 span,
+.design-18 a,
+.design-18 button,
+.design-18 input,
+.design-18 label {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-18 ::selection {
+    background-color: var(--color-accent);
+    color: white;
+}

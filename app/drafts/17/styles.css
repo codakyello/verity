@@ -1,0 +1,45 @@
+/* Design 17: Warm Organic */
+
+.design-17 {
+    --color-bg: #FBF8F3;
+    --color-bg-warm: #F5EDE4;
+    --color-text: #2D2A26;
+    --color-text-muted: #7A7067;
+    --color-accent: #C17F59;
+    --color-accent-sage: #6B7B5E;
+    --color-border: #E8E0D5;
+
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.design-17 .font-display {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-17 .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-17 h1,
+.design-17 h2,
+.design-17 h3 {
+    font-family: var(--font-display), Georgia, serif;
+}
+
+.design-17 p,
+.design-17 span,
+.design-17 a,
+.design-17 button,
+.design-17 input,
+.design-17 label {
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.design-17 ::selection {
+    background-color: var(--color-accent);
+    color: white;
+}
