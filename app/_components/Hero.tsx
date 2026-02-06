@@ -32,7 +32,7 @@ export default function Hero({ searchQuery, setSearchQuery }: HeroProps) {
             {/* Content Container */}
             <div className="relative flex h-full flex-col justify-center px-6 md:px-12 lg:px-24">
                 <div className="w-full max-w-4xl mx-auto lg:mx-0">
-                    <h1 className="mb-8 font-display text-5xl font-bold leading-tight text-white drop-shadow-xl lg:text-[60px] text-center lg:text-left">
+                    <h1 className="mb-8 font-display text-[45px] font-bold leading-tight text-white drop-shadow-xl lg:text-[60px] text-center lg:text-left">
                         Rentals. Homes. <br /> Agents. Loans.
                     </h1>
                     <p className="mb-8 text-xl text-white font-medium drop-shadow-md text-center lg:text-left max-w-2xl">
@@ -40,7 +40,7 @@ export default function Hero({ searchQuery, setSearchQuery }: HeroProps) {
                     </p>
 
                     {/* Search Bar */}
-                    <div className="relative flex w-full max-w-[600px] items-center rounded-full bg-white px-2 shadow-2xl mx-auto lg:mx-0 transition-transform hover:scale-[1.01]">
+                    <div id="hero-search" className="relative flex w-full max-w-[600px] items-center rounded-full bg-white px-2 shadow-2xl mx-auto lg:mx-0 transition-transform hover:scale-[1.01]">
                         <input
                             type="text"
                             placeholder="Address, School, City, Zip or Neighborhood"

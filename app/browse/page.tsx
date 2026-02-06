@@ -22,7 +22,7 @@ function PageContent() {
     } = useMarketplace();
 
     return (
-        <main className="min-h-screen bg-white pt-[72px]">
+        <main className=" min-h-screen pt-[72px]">
             <Navbar />
 
             {/* Top Row: Search Header */}
@@ -72,9 +72,9 @@ function PageContent() {
 }
 
 export default function Page() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <PageContent />
-    </Suspense>
-  );
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <PageContent />
+        </Suspense>
+    );
 }

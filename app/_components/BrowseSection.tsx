@@ -16,7 +16,7 @@ const categories = [
 
 export default function BrowseSection() {
     return (
-        <section className="py-12 bg-white">
+        <section className="bg-gray-50 py-12">
             <div className="px-6 md:px-12 lg:px-24">
                 <h2 className="text-2xl font-bold text-[#1a1816] mb-6">Browse homes</h2>
 
