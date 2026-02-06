@@ -16,18 +16,28 @@ export interface Property {
   imageUrl: string;
   images: string[];
   isVerified: boolean;
-  status: PropertyStatus;
-  rating: number;
+  status?: PropertyStatus;
+  rating?: number;
   amenities: string[];
   description: string;
-  coordinates: {
+  coordinates?: {
     lat: number;
     lng: number;
   };
-  addedAt: string; // ISO date
-  developer: {
+  addedAt?: string; // ISO date
+  createdAt?: string;
+  updatedAt?: string;
+  listedDate?: string;
+  features?: string[];
+  developer?: {
     name: string;
     isVerified: boolean;
+  };
+  agent?: {
+    name: string;
+    phone: string;
+    email: string;
+    image: string;
   };
   tags?: string[];
 }

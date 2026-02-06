@@ -1,17 +1,18 @@
 import { Search } from 'lucide-react';
+import { PropertyType, SortOption } from '@/lib/types';
 
 interface FilterBarProps {
     searchQuery: string;
     setSearchQuery: (query: string) => void;
-    filters: { location: string; type: string };
+    filters: { location: string; type: PropertyType | 'All' };
     setLocationFilter: (location: string) => void;
-    setTypeFilter: (type: string) => void;
-    sortBy: string;
-    setSortBy: (sort: string) => void;
+    setTypeFilter: (type: PropertyType | 'All') => void;
+    sortBy: SortOption;
+    setSortBy: (sort: SortOption) => void;
     validLocations: string[];
 }
 
-const propertyTypes = ['All', 'Apartment', 'House', 'Land', 'Commercial'];
+const propertyTypes: (PropertyType | 'All')[] = ['All', 'Apartment', 'House', 'Land', 'Office']; // Check available types
 
 export default function FilterBar({
     searchQuery,
@@ -47,10 +48,10 @@ export default function FilterBar({
                     {propertyTypes.map((type) => (
                         <button
                             key={type}
-                            onClick={() => setTypeFilter(type === 'All' ? '' : type)}
-                            className={`px-5 py-2 text-sm font-medium transition-all border-2 ${(type === 'All' && !filters.type) || filters.type === type
-                                    ? 'bg-[#0A0A0A] text-white border-[#0A0A0A]'
-                                    : 'bg-white text-[#0A0A0A] border-[#E5E5E5] hover:border-[#0A0A0A]'
+                            onClick={() => setTypeFilter(type)} // 'All' is a valid value
+                            className={`px-5 py-2 text-sm font-medium transition-all border-2 ${filters.type === type
+                                ? 'bg-[#0A0A0A] text-white border-[#0A0A0A]'
+                                : 'bg-white text-[#0A0A0A] border-[#E5E5E5] hover:border-[#0A0A0A]'
                                 }`}
                         >
                             {type}
@@ -72,7 +73,7 @@ export default function FilterBar({
 
                     <select
                         value={sortBy}
-                        onChange={(e) => setSortBy(e.target.value)}
+                        onChange={(e) => setSortBy(e.target.value as SortOption)}
                         className="border-2 border-[#E5E5E5] bg-white px-4 py-2 text-sm font-medium text-[#0A0A0A] focus:border-[#0A0A0A] focus:outline-none cursor-pointer"
                     >
                         <option value="newest">Newest</option>

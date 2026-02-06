@@ -1,17 +1,18 @@
 import { Search } from 'lucide-react';
+import { PropertyType, SortOption } from '@/lib/types';
 
 interface FilterBarProps {
     searchQuery: string;
     setSearchQuery: (query: string) => void;
-    filters: { location: string; type: string };
+    filters: { location: string; type: PropertyType | 'All' };
     setLocationFilter: (location: string) => void;
-    setTypeFilter: (type: string) => void;
-    sortBy: string;
-    setSortBy: (sort: string) => void;
+    setTypeFilter: (type: PropertyType | 'All') => void;
+    sortBy: SortOption;
+    setSortBy: (sort: SortOption) => void;
     validLocations: string[];
 }
 
-const propertyTypes = ['All', 'Apartment', 'House', 'Land'];
+const propertyTypes: (PropertyType | 'All')[] = ['All', 'Apartment', 'House', 'Land']; // Check available types
 
 export default function FilterBar({
     searchQuery,
@@ -46,10 +47,10 @@ export default function FilterBar({
                 {propertyTypes.map((type) => (
                     <button
                         key={type}
-                        onClick={() => setTypeFilter(type === 'All' ? '' : type)}
-                        className={`rounded-full px-5 py-2.5 text-sm transition-all ${(type === 'All' && !filters.type) || filters.type === type
-                                ? 'bg-[#2D2A26] text-white'
-                                : 'bg-[#F5EDE4] text-[#2D2A26] hover:bg-[#E8E0D5]'
+                        onClick={() => setTypeFilter(type)}
+                        className={`rounded-full px-5 py-2.5 text-sm transition-all ${filters.type === type
+                            ? 'bg-[#2D2A26] text-white'
+                            : 'bg-[#F5EDE4] text-[#2D2A26] hover:bg-[#E8E0D5]'
                             }`}
                     >
                         {type}
@@ -71,7 +72,7 @@ export default function FilterBar({
 
                 <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
+                    onChange={(e) => setSortBy(e.target.value as SortOption)}
                     className="rounded-full border border-[#E8E0D5] bg-white px-5 py-2.5 text-sm text-[#2D2A26] focus:border-[#6B7B5E] focus:outline-none cursor-pointer"
                 >
                     <option value="newest">Newest</option>

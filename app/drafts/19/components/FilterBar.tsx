@@ -1,17 +1,18 @@
 import { Search } from 'lucide-react';
+import { PropertyType, SortOption } from '@/lib/types';
 
 interface FilterBarProps {
     searchQuery: string;
     setSearchQuery: (query: string) => void;
-    filters: { location: string; type: string };
+    filters: { location: string; type: PropertyType | 'All' };
     setLocationFilter: (location: string) => void;
-    setTypeFilter: (type: string) => void;
-    sortBy: string;
-    setSortBy: (sort: string) => void;
+    setTypeFilter: (type: PropertyType | 'All') => void;
+    sortBy: SortOption;
+    setSortBy: (sort: SortOption) => void;
     validLocations: string[];
 }
 
-const propertyTypes = ['All', 'Residence', 'Estate', 'Penthouse', 'Land'];
+const propertyTypes: (PropertyType | 'All')[] = ['All', 'Apartment', 'House', 'Land', 'Office']; // Check available types
 
 export default function FilterBar({
     searchQuery,
@@ -46,10 +47,10 @@ export default function FilterBar({
                 {propertyTypes.map((type) => (
                     <button
                         key={type}
-                        onClick={() => setTypeFilter(type === 'All' ? '' : type)}
-                        className={`px-5 py-2.5 text-sm transition-all border ${(type === 'All' && !filters.type) || filters.type === type
-                                ? 'bg-[#8B2635] text-white border-[#8B2635]'
-                                : 'bg-white text-[#1A1A1A] border-[#E8E0D5] hover:border-[#C9A962]'
+                        onClick={() => setTypeFilter(type)}
+                        className={`px-5 py-2.5 text-sm transition-all border ${filters.type === type
+                            ? 'bg-[#8B2635] text-white border-[#8B2635]'
+                            : 'bg-white text-[#1A1A1A] border-[#E8E0D5] hover:border-[#C9A962]'
                             }`}
                     >
                         {type}
@@ -71,7 +72,7 @@ export default function FilterBar({
 
                 <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
+                    onChange={(e) => setSortBy(e.target.value as SortOption)}
                     className="border border-[#E8E0D5] bg-white px-4 py-2.5 text-sm text-[#1A1A1A] focus:border-[#C9A962] focus:outline-none cursor-pointer"
                 >
                     <option value="newest">Recently Listed</option>

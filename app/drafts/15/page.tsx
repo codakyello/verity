@@ -1,4 +1,7 @@
 'use client';
+import { Suspense } from "react";
+
+export const dynamic = 'force-dynamic';
 
 import { useMarketplace } from '@/hooks/useMarketplace';
 import Navbar from './components/Navbar';
@@ -6,7 +9,7 @@ import FilterBar from './components/FilterBar';
 import PropertyCard from './components/PropertyCard';
 import DesignNav from '@/components/DesignNav';
 
-export default function WarmMinimalPage() {
+function PageContent() {
     const {
         properties,
         searchQuery,
@@ -53,4 +56,12 @@ export default function WarmMinimalPage() {
             <DesignNav />
         </main>
     );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageContent />
+    </Suspense>
+  );
 }

@@ -1,11 +1,12 @@
 'use client';
+import { Suspense } from "react";
 
 import { useMarketplace } from '@/hooks/useMarketplace';
 import Navbar from './components/Navbar';
 import FilterBar from './components/FilterBar';
 import PropertyCard from './components/PropertyCard';
 
-export default function EditorialPage() {
+function PageContent() {
     const {
         properties,
         searchQuery,
@@ -55,4 +56,12 @@ export default function EditorialPage() {
             </section>
         </main>
     );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageContent />
+    </Suspense>
+  );
 }

@@ -7,6 +7,8 @@ import Hero from './_components/Hero';
 import DesignNav from '@/components/DesignNav';
 import BrowseSection from './_components/BrowseSection';
 import FeatureSection from './_components/FeatureSection';
+import FeaturedSection from './_components/FeaturedSection';
+import NeighborhoodsSection from './_components/NeighborhoodsSection';
 
 
 export default function PremiumPage() {
@@ -22,6 +24,8 @@ export default function PremiumPage() {
             <Hero searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
             <BrowseSection />
+            {/* <FeaturedSection /> */}
+            <NeighborhoodsSection />
             <FeatureSection />
 
             {/* Value Props / Marketing Content could go here */}

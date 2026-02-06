@@ -1,17 +1,18 @@
 import { Search } from 'lucide-react';
+import { PropertyType, SortOption } from '@/lib/types';
 
 interface FilterBarProps {
     searchQuery: string;
     setSearchQuery: (query: string) => void;
-    filters: { location: string; type: string };
+    filters: { location: string; type: PropertyType | 'All' };
     setLocationFilter: (location: string) => void;
-    setTypeFilter: (type: string) => void;
-    sortBy: string;
-    setSortBy: (sort: string) => void;
+    setTypeFilter: (type: PropertyType | 'All') => void;
+    sortBy: SortOption;
+    setSortBy: (sort: SortOption) => void;
     validLocations: string[];
 }
 
-const propertyTypes = ['All', 'Apartment', 'House', 'Land', 'Commercial'];
+const propertyTypes: (PropertyType | 'All')[] = ['All', 'Apartment', 'House', 'Land', 'Office']; // Check available types
 
 export default function FilterBar({
     searchQuery,
@@ -46,10 +47,10 @@ export default function FilterBar({
                 {propertyTypes.map((type) => (
                     <button
                         key={type}
-                        onClick={() => setTypeFilter(type === 'All' ? '' : type)}
-                        className={`rounded-lg px-5 py-2.5 text-sm font-medium transition-all ${(type === 'All' && !filters.type) || filters.type === type
-                                ? 'bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white'
-                                : 'bg-[#12121A] text-[#9CA3AF] border border-[#1F1F2E] hover:border-[#3B82F6] hover:text-white'
+                        onClick={() => setTypeFilter(type)}
+                        className={`rounded-lg px-5 py-2.5 text-sm font-medium transition-all ${filters.type === type
+                            ? 'bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white'
+                            : 'bg-[#12121A] text-[#9CA3AF] border border-[#1F1F2E] hover:border-[#3B82F6] hover:text-white'
                             }`}
                     >
                         {type}
@@ -71,7 +72,7 @@ export default function FilterBar({
 
                 <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
+                    onChange={(e) => setSortBy(e.target.value as SortOption)}
                     className="rounded-lg border border-[#1F1F2E] bg-[#12121A] px-4 py-2.5 text-sm text-[#9CA3AF] focus:border-[#3B82F6] focus:outline-none cursor-pointer"
                 >
                     <option value="newest">Latest</option>

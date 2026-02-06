@@ -61,12 +61,14 @@ export const useMarketplace = () => {
                 case 'price-desc':
                     return b.price - a.price;
                 case 'rating':
-                    return b.rating - a.rating;
+                    return (b.rating || 0) - (a.rating || 0);
                 case 'popularity':
-                    return b.rating - a.rating; // Mock popularity using rating for now
+                    return (b.rating || 0) - (a.rating || 0); // Mock popularity using rating for now
                 case 'newest':
                 default:
-                    return new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime();
+                    const dateA = a.addedAt ? new Date(a.addedAt).getTime() : 0;
+                    const dateB = b.addedAt ? new Date(b.addedAt).getTime() : 0;
+                    return dateB - dateA;
             }
         });
     }, [filteredProperties, sortBy]);

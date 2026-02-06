@@ -34,6 +34,10 @@ export const metadata: Metadata = {
   description: "Premium property discovery platform.",
 };
 
+import Footer from "./_components/Footer";
+
+// ... existing imports
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,6 +49,7 @@ export default function RootLayout({
         className={`${galano.variable} design-26 antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );

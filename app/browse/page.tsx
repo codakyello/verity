@@ -1,4 +1,5 @@
 'use client';
+import { Suspense } from "react";
 
 import { useMarketplace } from '@/hooks/useMarketplace';
 import Navbar from '../_components/Navbar';
@@ -6,7 +7,7 @@ import PropertyCard from '../_components/PropertyCard';
 import FilterBar from '../_components/FilterBar';
 import SearchHeader from '../_components/SearchHeader';
 
-export default function BrowsePage() {
+function PageContent() {
     const {
         properties,
         totalCount,
@@ -68,4 +69,12 @@ export default function BrowsePage() {
             </section>
         </main>
     );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageContent />
+    </Suspense>
+  );
 }

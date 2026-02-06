@@ -1,4 +1,5 @@
 'use client';
+import { Suspense } from "react";
 
 import { useMarketplace } from '@/hooks/useMarketplace';
 import Navbar from './components/Navbar';
@@ -6,7 +7,7 @@ import FilterBar from './components/FilterBar';
 import PropertyCard from './components/PropertyCard';
 import { Download, Share2 } from 'lucide-react';
 
-export default function FintechPage() {
+function PageContent() {
     const {
         properties,
         searchQuery,
@@ -57,4 +58,12 @@ export default function FintechPage() {
             </section>
         </main>
     );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageContent />
+    </Suspense>
+  );
 }
