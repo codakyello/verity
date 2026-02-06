@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import { useMarketplace } from '@/hooks/useMarketplace';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import Navbar from './_components/Navbar';
+import Hero from './_components/Hero';
 import DesignNav from '@/components/DesignNav';
+import BrowseSection from './_components/BrowseSection';
+import FeatureSection from './_components/FeatureSection';
 
 
 export default function PremiumPage() {
@@ -18,6 +20,9 @@ export default function PremiumPage() {
             <Navbar />
 
             <Hero searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+
+            <BrowseSection />
+            <FeatureSection />
 
             {/* Value Props / Marketing Content could go here */}
             <section className="py-20 bg-gray-50">

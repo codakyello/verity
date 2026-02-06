@@ -1,10 +1,10 @@
 'use client';
 
 import { useMarketplace } from '@/hooks/useMarketplace';
-import Navbar from '../components/Navbar';
-import PropertyCard from '../components/PropertyCard';
-import FilterBar from '../components/FilterBar';
-import SearchHeader from '../components/SearchHeader';
+import Navbar from '../_components/Navbar';
+import PropertyCard from '../_components/PropertyCard';
+import FilterBar from '../_components/FilterBar';
+import SearchHeader from '../_components/SearchHeader';
 
 export default function BrowsePage() {
     const {
