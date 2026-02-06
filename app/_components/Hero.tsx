@@ -32,7 +32,7 @@ export default function Hero({ searchQuery, setSearchQuery }: HeroProps) {
             {/* Content Container */}
             <div className="relative flex h-full flex-col justify-center px-6 md:px-12 lg:px-24">
                 <div className="w-full max-w-4xl mx-auto lg:mx-0">
-                    <h1 className="mb-8 font-display text-[45px] font-bold leading-tight text-white drop-shadow-xl lg:text-[60px] text-center lg:text-left">
+                    <h1 className="mb-8 font-display text-[40px] font-bold leading-tight text-white drop-shadow-xl lg:text-[60px] text-center lg:text-left">
                         Rentals. Homes. <br /> Agents. Loans.
                     </h1>
                     <p className="mb-8 text-xl text-white font-medium drop-shadow-md text-center lg:text-left max-w-2xl">
